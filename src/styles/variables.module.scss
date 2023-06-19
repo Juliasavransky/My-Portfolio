@@ -1,0 +1,36 @@
+//COLORS
+$grey-light-1: #8d8d8d;
+// $grey-light-2: #515152;
+$grey-light-2: #7b7b7d;
+$yellow: #ffcc00;
+$purple: #4b116f;
+// $test: #6a6a6c;
+$grey-dark-BG1: #1d1d1d;
+$grey-dark-BG2: #181818;
+$white: #fff;
+
+
+//Size
+$font-huge: 9.3rem;
+$font-h2: 8rem;
+$font-big: 3.3rem;
+$font-reg: 2.2rem;
+$font-small: 1.8rem;
+$font-tiny: 1.4rem;
+
+:export{
+grey-light-1: $grey-light-1;
+grey-light-2:  $grey-light-2;
+yellow:  $yellow;
+purple: $purple;
+grey-dark-BG1:  $grey-dark-BG1;
+grey-dark-BG2: $grey-dark-BG2;
+white:  $white;
+
+font-huge: $font-huge;
+font-h2:  $font-h2;
+font-big:  $font-big;
+font-reg:  $font-reg;
+font-small:  $font-small;
+font-tiny: $font-tiny;
+}

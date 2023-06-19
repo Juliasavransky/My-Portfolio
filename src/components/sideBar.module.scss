@@ -1,0 +1,104 @@
+@import '../styles/mixins.module.scss';
+@import '../styles/variables.module.scss';
+
+.nav {
+  flex: 0 0 13%;
+  position: relative;
+
+  @include respond(tab-land) {
+    flex: 0 0 1.5%;
+  }
+
+  &__sidebar {
+    position: fixed;
+
+    @include respond(tab-land) {
+      width: 100%;
+      position: relative;
+    }
+  }
+
+  &__list {
+    margin-top: 35vh;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+    @include respond(tab-land) {
+      margin-top: 0;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 1px;
+      background-color: $yellow;
+      transform: scaleY(0);
+      transition: transform 0.3s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+    }
+
+    &:hover::before {
+      transform: scaleY(1);
+      width: 100%;
+    }
+
+    &:first-child {
+      border-top: 1px solid $grey-light-2;
+    }
+
+    padding: 1.5rem 1.5rem;
+    letter-spacing: 3px;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid $grey-light-2;
+    width: 13vw;
+
+    @include respond(tab-land) {
+      width: 20%;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $grey-light-1;
+    position: relative;
+    z-index: 10;
+    margin-left: 1rem;
+    font-size: $font-tiny;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10rem;
+
+    @include respond(tab-land) {
+      margin-top: 0;
+      width: 20%;
+      align-items: center;
+      justify-content: space-around;
+      padding-right: 2rem;
+      border-bottom: 1px solid $grey-light-2;
+    }
+  }
+
+  .icon {
+    height: 3rem;
+    width: 3rem;
+    fill: $grey-light-2;
+    cursor: pointer;
+
+    &:hover {
+      fill: $yellow;
+    }
+  }
+}

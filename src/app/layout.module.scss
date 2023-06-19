@@ -1,0 +1,34 @@
+@import '../styles/mixins.module.scss';
+@import '../styles/variables.module.scss';
+
+
+.container {
+  display: flex;
+  font-size: $font-reg;
+  font-weight: 100;
+  background-color: $grey-dark-BG1;
+  height: 100%;
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  @include respond(desktop) {
+    font-size: 62%;
+  }
+
+  @include respond(tab-land) {
+    flex-direction: column;
+    font-size: 43%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
+}
+
+// .pages {
+//   margin-bottom: 6rem;
+// }
