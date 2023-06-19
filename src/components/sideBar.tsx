@@ -37,7 +37,7 @@ export default function SideBar() {
               </svg>
             </Link>
 
-            <Link href='../pdf/Julia Savransky-Perl CV.pdf' target='_blank'>
+            <Link href='/pdf/Julia Savransky-Perl CV.pdf' target='_blank'>
               <svg
                 className={styled.icon}
                 version='1.1'
