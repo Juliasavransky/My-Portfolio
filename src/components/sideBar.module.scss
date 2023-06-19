@@ -24,6 +24,10 @@
     flex-direction: column;
     list-style: none;
 
+    @include respond(desktop) {
+      margin-top: 22vh;
+    }
+
     @include respond(tab-land) {
       margin-top: 0;
       justify-content: space-between;
@@ -80,6 +84,10 @@
     display: flex;
     justify-content: space-evenly;
     margin-top: 10rem;
+
+    @include respond(desktop) {
+      margin-top: 6rem;
+    }
 
     @include respond(tab-land) {
       margin-top: 0;
