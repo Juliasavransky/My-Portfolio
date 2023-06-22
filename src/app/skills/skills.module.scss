@@ -1,0 +1,66 @@
+@import '../../styles/variables.module.scss';
+@import '../../styles/mixins.module.scss';
+@import '../../styles/animations.module.scss';
+
+.skills_page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+
+    @include respond(tab-land) {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+.skills_text {
+    @include header;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab-land) {
+        width: 45%;
+        text-align: center;
+    }
+
+    @include respond(tab-port) {
+        width: 100%;
+    }
+
+    &__header {
+        @include respond(desktop) {
+            margin-bottom: 1rem;
+        }
+
+        display: flex;
+        font-size: $font-h2;
+    }
+
+    &__text {
+        font-size: $font-small;
+        margin-top: 6rem;
+        line-height: 180%;
+        font-weight: 300;
+        letter-spacing: 1px;
+        width: 60%;
+
+        @include respond(desktop) {
+            margin-top: 3rem;
+        }
+
+        @include respond(tab-port) {
+            letter-spacing: 2px;
+            margin-top: 0;
+            width: 90%;
+            line-height: 130%;
+        }
+
+    }
+}
+
+.text__line__item {
+    @include respond(tab-port) {
+        font-size: 90%;
+    }
+}
