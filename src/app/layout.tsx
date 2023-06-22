@@ -1,16 +1,10 @@
 import './globals.css';
-import { Roboto, La_Belle_Aurore } from 'next/font/google';
-import SideBar from '../components/sideBar';
+import { Roboto } from 'next/font/google';
+import SideBar from '../components/side-bar/sideBar';
 import styles from './layout.module.scss';
 
 const roboto = Roboto({
   weight: ['100', '300', '400', '500', '700', '900'],
-  style: ['normal'],
-  subsets: ['latin'],
-});
-
-const laBelle = La_Belle_Aurore({
-  weight: ['400'],
   style: ['normal'],
   subsets: ['latin'],
 });

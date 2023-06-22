@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from './sideBar.module.scss';
-
 import Link from 'next/link';
 
 export default function SideBar() {

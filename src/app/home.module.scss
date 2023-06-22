@@ -1,0 +1,146 @@
+@import '../styles/mixins.module.scss';
+@import '../styles/variables.module.scss';
+@import '../styles/animations.module.scss';
+
+.main_page {
+    // flex: 0 0 86.99%;
+    // height: 100vh;
+    // max-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @include respond(tab-land) {
+        flex: 0 0 100%;
+    }
+
+    @include respond(tab-port) {
+        flex: 0 0 100%;
+        line-height: 1;
+    }
+}
+
+
+
+.header_text {
+    @include header;
+    margin-left: 20rem;
+
+    @include respond(desktop) {
+        margin-top: 7rem;
+        margin-bottom: 6rem;
+    }
+
+    @include respond(tab-land) {
+        align-content: space-around;
+        margin-top: 1rem;
+    }
+
+    @include respond(tab-port) {
+        margin: 0 auto;
+        align-items: flex-start;
+        margin-top: 3rem;
+    }
+}
+
+.text__line {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include respond(tab-port) {
+        margin: 0 auto;
+    }
+
+    & {
+        animation: slideIn 3s ease-in-out 0.5s 1 normal forwards;
+    }
+
+    &:hover {
+        color: $yellow;
+        animation: text 0.5s linear;
+    }
+
+    &__FL {
+        font-size: $font-huge * 1.45;
+        line-height: 155px;
+        margin: 0 1rem;
+        color: $purple;
+        text-shadow: 1vmin 0 $yellow;
+
+        @include respond(desktop) {
+            font-size: $font-huge * 1.2;
+            line-height: 8rem;
+        }
+
+        @include respond(tab-port) {
+            font-size: $font-huge * 1.2;
+            line-height: 8rem;
+        }
+    }
+}
+
+.btn {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab-land) {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+}
+
+.btn__main_page {
+    display: inline-flex;
+    width: 35rem;
+    height: 6.5rem;
+    margin: 0 1.5rem;
+    perspective: 1000px;
+
+    &>a {
+        font-size: $font-reg;
+        letter-spacing: 5px;
+        transform-style: preserve-3d;
+        transform: translateZ(-25px);
+        transition: transform 0.3s;
+        font-weight: 100;
+
+        &:hover {
+            transform: translateZ(-2.5rem) rotateX(-90deg);
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            height: 6.5rem;
+            width: 35rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 5px solid $purple;
+
+            @include respond(tab-land) {
+                width: 40rem;
+            }
+        }
+
+        &::before {
+            content: 'WANNA C MORE';
+            color: $yellow;
+            background: $grey-dark-BG1;
+            transform: rotateY(0deg) translateZ(2.5rem);
+        }
+
+        &::after {
+            content: 'CHECK MY PROJECTS';
+            color: $yellow;
+            background: $grey-dark-BG1;
+            transform: rotateX(90deg) translateZ(2.5rem);
+        }
+    }
+}
