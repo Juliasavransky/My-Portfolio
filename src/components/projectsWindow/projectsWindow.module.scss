@@ -1,0 +1,39 @@
+@import '../../styles/mixins.module.scss';
+@import '../../styles/variables.module.scss';
+@import '../../styles/animations.module.scss';
+
+.container {
+    // border: 2px solid red;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex: 1 1 10em;
+
+    &_title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        font-size: $font-reg;
+        gap: 4rem;
+        padding-bottom: 2rem;
+    }
+
+    // overflow-y: scroll;
+    // ::-webkit-scrollbar {
+    //     width: 1.3em;
+    // }
+
+    // ::-webkit-scrollbar-track {
+    //     background: $yellow;
+    // }
+
+    // ::-webkit-scrollbar-thumb {
+    //     background: $purple;
+    //     border-radius: 100vw;
+    //     border: 0.25em $yellow solid;
+    // }
+}

@@ -1,0 +1,51 @@
+@import '../../styles/variables.module.scss';
+@import '../../styles/mixins.module.scss';
+@import '../../styles/animations.module.scss';
+
+.projects_page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85vw;
+
+    @include respond(tab-land) {
+        justify-content: center;
+    }
+}
+
+.projects__header {
+    @include header;
+
+    flex-direction: row;
+    align-items: baseline;
+    align-content: center;
+    justify-content: flex-start;
+    font-size: $font-h2;
+
+    @include respond(tab-land) {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    @include respond(tab-port) {
+        margin-top: 0;
+    }
+
+    &__text {
+        font-size: $font-reg;
+        width: 70%;
+        margin-top: 4rem;
+
+        @include respond(tab-land) {
+            margin: 4rem auto;
+        }
+
+        @include respond(tab-port) {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem auto;
+        }
+
+    }
+}
