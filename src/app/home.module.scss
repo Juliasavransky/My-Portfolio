@@ -26,6 +26,7 @@
 .header_text {
     @include header;
     margin-left: 20rem;
+    font-size: $font-huge;
 
     @include respond(desktop) {
         margin-top: 7rem;

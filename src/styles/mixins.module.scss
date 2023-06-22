@@ -5,75 +5,21 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
-  font-size: $font-huge;
   font-weight: 900;
-  letter-spacing: 6px;
+  letter-spacing: 10px;
   color: $white;
   cursor: pointer;
 
   &__text {
     font-size: $font-huge;
     font-weight: 900;
-
   }
-
 }
 
 //for use
 // .className{ @include mixinName}
 //example =>  .header-text{ @include header }
 
-
-
-
-@mixin lastChildLeft {
-  &>span:last-child {
-    margin-left: 2rem;
-  }
-}
-
-@mixin lastChildRight {
-  &>span:last-child {
-    margin-right: 2rem;
-  }
-}
-
-@mixin lastChildTop {
-  &>span:last-child {
-    margin-top: 2rem;
-  }
-}
-
-@mixin lastChildBottom {
-  &>span:last-child {
-    margin-bottom: 2rem;
-  }
-}
-
-@mixin firstChildLeft {
-  &>span:first-child {
-    margin-left: 2rem;
-  }
-}
-
-@mixin firstChildRight {
-  &>span:first-child {
-    margin-right: 2rem;
-  }
-}
-
-@mixin firstChildTop {
-  &>span:first-child {
-    margin-top: 2rem;
-  }
-}
-
-@mixin firstChildBottom {
-  &>span:first-child {
-    margin-bottom: 2rem;
-  }
-}
 
 ////////////////////MEDIA QUERY/////////////////////////
 //0-600px phone || 37.5 em
