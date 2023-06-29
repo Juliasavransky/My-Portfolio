@@ -2,6 +2,7 @@ import TagDeco from '@/components/tag-deco/tagDeco';
 import styled from './skills.module.scss';
 import SplitText from '@/components/split-text/splitText';
 import TextCloud from '@/components/text-cloud/textCloud';
+import TypeWriter from '@/components/type-writer/typeWriter';
 
 export default function Skills() {
   return (
@@ -29,8 +30,7 @@ export default function Skills() {
           <TagDeco text='</p>' />
         </div>
       </div>
-
-      <TextCloud />
+      <TypeWriter />
     </div>
   );
 }

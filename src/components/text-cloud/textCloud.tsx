@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client';
 import React, { useEffect } from 'react';
 import TagCloud from 'TagCloud';
@@ -47,13 +46,13 @@ const TextCloud = () => {
         initSpeed: 'fast',
         direction: 135,
       };
-
+      //@ts-ignore
       TagCloud(container, text, options);
     };
   }, []);
 
   return (
-    <div style={{ width: '55%' }}>
+    <div style={{ width: '54%' }}>
       <div
         style={{
           color: '#ffcc00',
@@ -64,6 +63,7 @@ const TextCloud = () => {
       >
         <span
           className='tagcloud--item'
+          //@ts-ignore
           style={{ ':hover': { color: '#fff' } }}
         ></span>
       </div>
