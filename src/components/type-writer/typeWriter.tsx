@@ -9,10 +9,10 @@ export default function TypeWriter() {
   useEffect(() => {
     const options = {
       strings: [
-        'HTML^1000\n`CSS` ^1000\n`Java-Script`^1000\n`React js` ^1000\n`Hooks` ^1000\n`Mongoose` ^1000\n`Sass` ^1000\n`Type-Script` ^1000\n`Context` ^1000\n`Node-js` ^1000\n`Mongo DB` ^1000\n`Express` ^1000\n`Git` ^1000\n`MUI` ^1000\n`Figma` ^1000\n`Next-js``',
+        'My Skills:\n ^1000\nHTML^1000\n`CSS` ^1000\n`Java-Script`^1000\n`React js` ^1000\n`Hooks` ^1000\n`Mongoose` ^1000\n`Sass` ^1000\n`Type-Script` ^1000\n`Context` ^1000\n`Node-js` ^1000\n`Mongo DB` ^1000\n`Express` ^1000\n`Git` ^1000\n`MUI` ^1000\n`Figma` ^1000\n`Next-js` ^1000\n`and more...``',
       ],
-      typeSpeed: 300,
-      backSpeed: 100,
+      typeSpeed: 100,
+      fadeOut: true,
       loop: true,
     };
 
@@ -27,11 +27,13 @@ export default function TypeWriter() {
   }, []);
 
   return (
-    <div className={styled.container}>
-      <h1 className={styled.text}>My Skills</h1>
-      <div className={styled.text}>
-        <span style={{ whiteSpace: 'pre' }} ref={el} />
+    <>
+      {/* <h1 className={styled.text}>My Skills</h1> */}
+      <div className={styled.container}>
+        <div className={styled.text}>
+          <span style={{ whiteSpace: 'pre' }} ref={el} />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
