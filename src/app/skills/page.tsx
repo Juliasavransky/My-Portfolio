@@ -1,7 +1,6 @@
 import TagDeco from '@/components/tag-deco/tagDeco';
 import styled from './skills.module.scss';
 import SplitText from '@/components/split-text/splitText';
-import TextCloud from '@/components/text-cloud/textCloud';
 import TypeWriter from '@/components/type-writer/typeWriter';
 
 export default function Skills() {
@@ -10,7 +9,12 @@ export default function Skills() {
       <div className={styled.skills_text}>
         <h1 className={styled.skills_text__header}>
           <TagDeco text='<h2>' />
-          <SplitText text='Me, Myself and I' />
+          <div>
+            <SplitText text='Me,' />
+            <SplitText text=' Myself' />
+            <SplitText text=' and' />
+            <SplitText text=' I' />
+          </div>
           <TagDeco text='</h2>' />
         </h1>
         <div className={styled.skills_text__text}>

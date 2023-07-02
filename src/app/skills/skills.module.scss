@@ -18,6 +18,7 @@
     @include header;
     justify-content: center;
     align-items: center;
+    width: 50vw;
 
     @include respond(tab-land) {
         width: 45%;
