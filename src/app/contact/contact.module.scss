@@ -1,0 +1,96 @@
+@import '../../styles/variables.module.scss';
+@import '../../styles/mixins.module.scss';
+@import '../../styles/animations.module.scss';
+
+.contact_page {
+    height: 90vh;
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &_content {
+        @include header;
+        align-items: center;
+        font-size: $font-h2;
+        display: flex;
+
+        &_header {
+            display: flex;
+        }
+
+        &_text {
+            display: flex;
+            font-size: $font-reg;
+            margin-bottom: 6rem;
+            margin-top: 6rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+
+            @include respond(tab-land) {
+                text-align: center;
+            }
+
+            @include respond(desktop) {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                line-height: 120%;
+            }
+        }
+    }
+}
+
+
+
+.form {
+
+    @include respond(tab-port) {
+        width: 100%;
+    }
+
+    &_group {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__input {
+        width: 100%;
+        margin: 1rem 0;
+        font-size: $font-reg;
+        color: $grey-light-1;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($grey-light-2, 0.5);
+        border: none;
+        box-shadow: 0 1rem 2rem transparent;
+        transition: transform 0.3s;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0.5rem 2rem rgba($grey-light-1, 0.5);
+            border-bottom: 3px solid rgba($yellow, 1);
+        }
+
+        &:focus:invalid {
+            border-bottom: 3px solid red;
+        }
+
+        &::placeholder {
+            color: $grey-light-1;
+        }
+    }
+}
+
+.form__btn {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1.5rem 0;
+    border: none;
+    outline: none;
+    background-color: rgba($grey-light-2, 0.5);
+    color: $grey-light-1;
+    font-size: $font-reg;
+    cursor: pointer;
+    border-radius: 2px;
+}
